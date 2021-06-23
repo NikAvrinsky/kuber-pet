@@ -21,11 +21,8 @@ jobs:
     - name: Print hello message
       run: echo "Hello world from testing job"
       
-    - name: Execute few commands
-      run: |
-       echo "Hello message 1"
-       echo "Hello message 2"
-       echo "Application name: ${{ env.APPLICATION_NAME }}"
+    - name: Clone repository
+      uses: actions/checkout@v1
        
     - name: List current folder
       run: ls -la
