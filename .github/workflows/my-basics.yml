@@ -7,7 +7,7 @@
 name: My-GitHubAction-Basics
 env:
  APPLICATION_NAME: "MyFlask"
- DEPLOY_PAKADGE_NAME    : "foo_bar_deploy_ver-${{ github.sha }}"
+ DEPLOY_PACKAGE_NAME    : "foo_bar_deploy_ver-${{ github.sha }}"
 on:
   push:
     branches: [ master ]
@@ -37,3 +37,9 @@ jobs:
     
     - name: Deploymet package
       run: echo "Deployment package name is ${{env.DEPLOY_PACKAGE_NAME}}"
+    
+    - name: Test some packages if they are here 1
+      run: aws -- version
+    
+    - name: Test some packages if they are here 2
+      run: zip
