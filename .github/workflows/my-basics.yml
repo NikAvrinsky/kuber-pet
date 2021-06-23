@@ -1,0 +1,27 @@
+# ---------------------------------------------------
+# My GisHubActions Basic file
+#
+# Avrinsky Nikita
+#----------------------------------------------------
+
+name: My-GitHubAction-Basics
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  my_testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Print hello message
+      run: echo "Hello world from testing job"
+      
+  my_deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Print hello message
+      run: echo "Hello world from testing job" 
